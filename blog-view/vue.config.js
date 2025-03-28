@@ -1,5 +1,8 @@
 module.exports = {
 	configureWebpack: {
+		devServer: {
+    disableHostCheck: true,
+  },
 		resolve: {
 			alias: {
 				'assets': '@/assets',
@@ -9,9 +12,8 @@ module.exports = {
 				'views': '@/views',
 				'plugins': '@/plugins'
 			}
-		}
-	},
-	optimization: {
+		},
+		optimization: {
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
@@ -35,4 +37,6 @@ module.exports = {
 			},
 		},
 	},
+	},
+	
 }
